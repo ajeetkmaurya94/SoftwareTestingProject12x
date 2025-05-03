@@ -1,169 +1,140 @@
-## **Software Testing Life Cycle (STLC) **
-**Software Testing Life Cycle (STLC)** is a sequence of different activities performed during the software testing process.
+Software Testing Test Plan
 
-![image.png](https://eraser.imgix.net/workspaces/RklhCFoOSNu4Biov8Rqg/WWS31TdyovhjTB1TVo9v2jWpPei1/-6am9pI0gVVezUqIAhJgi.png?ixlib=js-3.7.0 "image.png")
+1. Introduction
+Purpose of the Test Plan
+This document defines the strategy, objectives, schedule, estimation, deliverables, and resources required to perform testing for the software product [VWO].
 
-#### **Requirement Analysis**
-- Quality assurance team understands the requirements like what is to be tested.
-- If anything is missing or not understandable then quality assurance team meets with the stakeholders to better understand the detail knowledge of requirement.
-  -> SRS, Google Docs.  
+Scope
 
+In Scope: [List of modules/features to be tested]
 
+Out of Scope: [List of modules/features not to be tested]
 
+References
 
+Software Requirements Specification (SRS)
 
-**Test Planning**
+Design Documents
 
-- In this phase manager of the testing team calculates estimated effort and cost for the testing work 
-- QA Leads 
-- [﻿sdet.live/project2](https://sdet.live/project2) 
-- https://sdet.live/genai
-- Gen via AI - [﻿chatgpt.com/canvas/shared/67c6663548f48191b1bd56807afc93d6](https://chatgpt.com/canvas/shared/67c6663548f48191b1bd56807afc93d6) 
+Project Plan
 
+2. Test Objectives
+Verify that the software meets all documented requirements.
 
-### Task  
-1. Before -> Create Manually in Google Docs. You can use this template - [﻿docs.google.com/document/d/1JDF1xfkYxu0gPoyyf_ZstLLOoAgjCxu5/edit](https://docs.google.com/document/d/1JDF1xfkYxu0gPoyyf_ZstLLOoAgjCxu5/edit) 
-2. Try this -> [﻿chatgpt.com/share/6815a1e0-067c-8009-944b-8d48a844ab90](https://chatgpt.com/share/6815a1e0-067c-8009-944b-8d48a844ab90) 
+Identify and fix defects before release.
 
+Ensure compatibility across supported platforms and environments.
 
-**Comprehensive Test Plan for app.vwo.com (A/B Testing SaaS Platform)**
+Validate performance and usability criteria.
 
----
+3. Test Items
+[List software components/modules to be tested, e.g., login, registration, dashboard]
 
-**1. Objective**
+APIs (if applicable)
 
-- To validate the functional, non-functional, and integration quality of app.vwo.com’s A/B testing platform.
-- Ensure accurate reporting, stable campaign management, and reliable integrations.
-- **Success Criteria:** 95% test pass rate, response time <2s for major workflows, zero Sev1/Sev2 defects in production.
-- **Stakeholder Expectations:** Deliver an intuitive, accurate experimentation platform supporting marketing, product, and customer success goals.
----
+Integrations with third-party services
 
-**2. Scope**
+4. Features to be Tested
+Functional testing of all user workflows
 
-- **In Scope:**
-    - Core functionalities: Project creation, Variant creation, Campaign activation, Result reporting.
-    - Integrations: Google Analytics, Tag Managers.
-    - Device/Browser coverage (see Section 5)
-- **Out of Scope:**
-    - Backend infrastructure testing (owned by DevOps)
-    - Third-party services beyond integration touchpoints
----
+UI/UX compliance with design specs
 
-**3. Major Workflows**
+Error handling and boundary conditions
 
-- User Registration/Login
-- Project Setup (Page Targeting)
-- Variant Creation and Editor usage
-- Campaign Activation/Deactivation
-- Report Analysis & Exporting
-- Integrations configuration and validation
----
+Data validation and business rules
 
-**4. Test Environments**
+5. Features Not to be Tested
+Unfinished modules
 
-| Device | OS | Browsers |
-| ----- | ----- | ----- |
-| Desktop | Windows 10 | Chrome, Firefox, Edge |
-| MacBook | macOS | Safari, Chrome |
-| Mobile | iOS, Android | Chrome, Safari |
-- **Test Data Requirements:**
-    - Dummy websites
-    - Sample campaigns (A/B, Split URL, Multivariate)
-    - Dummy user personas and accounts
----
+Experimental features not included in release scope
 
-**5. Defect Reporting Procedure**
+Hardware integration not yet available
 
-- Tool: JIRA
-- **Severity & Priority Matrix**
- | Severity | Description | Response | Resolution |
- |----------|-------------|----------|------------|
- | Sev 1 | Critical blocker | 1 hr | 8 hrs |
- | Sev 2 | Major defect | 4 hrs | 24 hrs |
- | Sev 3 | Minor defect | 24 hrs | 3 days |
- | Sev 4 | Cosmetic/Trivial | 48 hrs | Next sprint |
----
+6. Test Strategy
+Testing Types
 
-**6. Test Strategy**
+Unit Testing (handled by developers)
 
-- **Functional Testing:** Manual (TestRail)
-- **Automation Testing:**
-    - Selenium (UI)
-    - REST Assured (API)
-    - Allure (Reporting)
-- **Performance Testing:** JMeter (Load Testing 1000 concurrent users)
-- **Accessibility Testing:** Axe, WCAG 2.1 compliance
-- **Security Testing:**
-    - SQL Injection, XSS testing
-    - Session management and token expiry tests
----
+Integration Testing
 
-**7. Test Schedule**
+System Testing
 
-| Task | Start Date | End Date | Owner |
-| ----- | ----- | ----- | ----- |
-| Test Plan Creation | May 3 | May 5 | Test Lead |
-| Test Case Design | May 6 | May 12 | QA Team |
-| Test Execution | May 13 | May 25 | QA Team |
-| Reporting & Closure | May 26 | May 28 | Test Lead |
----
+Regression Testing
 
-**8. Test Deliverables**
+User Acceptance Testing (UAT)
 
-- Test Plan Document
-- Test Cases & Checklists
-- Traceability Matrix
-- Defect Reports
-- Daily/Weekly Status Reports
-- Test Summary Report
-- Lessons Learned Document
----
+Performance/Load Testing (if applicable)
 
-**9. Entry and Exit Criteria**
+Security Testing (if applicable)
 
-- **Entry:** Signed-off requirements, stable test environment, test data available
-- **Exit:** 95% test cases passed, no Sev1/Sev2 open defects, stakeholder sign-off
----
+Approach
+Manual and/or automated testing will be used. Tools like [e.g., Selenium, Postman, JMeter] will support automation and validation.
 
-**10. Tools**
+7. Test Environment
+OS: Windows 11, macOS, Linux
 
-- Test Management: TestRail
-- Automation: Selenium, REST Assured
-- Performance: JMeter
-- Accessibility: Axe
-- Reporting: Allure, Confluence
-- Communication: Slack, Zoom
-- Defect Tracking: JIRA
----
+Browsers: Chrome, Firefox, Safari, Edge
 
-**11. Risks and Mitigation**
+Mobile: Android, iOS (list versions)
 
-| Risk | Impact | Mitigation |
-| ----- | ----- | ----- |
-| Integration downtime | High | Use mock APIs, retries |
-| Unstable test environments | Medium | Parallel environments setup |
-| Delayed builds | High | Early smoke validation, daily syncs |
----
+Backend: [e.g., MySQL, MongoDB, Node.js]
 
-**12. Traceability Matrix (Sample)**
+Test Server URL: [staging URL or mock server]
 
-| Requirement ID | Test Case ID | Defect ID |
-| ----- | ----- | ----- |
-| REQ-01 | TC-01, TC-02 | BUG-101 |
-| REQ-02 | TC-03 | - |
----
+8. Test Deliverables
+Test Plan Document
 
-**13. Compliance and Standards**
+Test Cases / Test Scripts
 
-- WCAG 2.1 (Accessibility)
-- OWASP Top 10 (Security)
-- ISO/IEC 25010 (Quality Model reference)
----
+Test Data
 
-**14. Approvals**
+Defect Reports
 
-| Name | Role | Approval Date | Signature |
-| ----- | ----- | ----- | ----- |
-| Pramod Dutta | Test Lead | YYYY-MM-DD | ___ |
-| Product Manager | Stakeholder | YYYY-MM-DD | ___ |
-| QA Manager | QA Reviewer | YYYY-MM-DD | ___ |
+Test Summary Report
+
+Automation Test Results (if applicable)
+
+9. Entry and Exit Criteria
+Entry Criteria
+
+All development for the build is complete.
+
+Test environment is ready.
+
+Test cases are reviewed and approved.
+
+Exit Criteria
+
+All critical and high-severity defects are resolved.
+
+All test cases are executed with 95% pass rate or higher.
+
+Final test report is reviewed and signed off.
+
+10. Schedule
+Phase	Start Date	End Date
+Test Planning	[date]	[date]
+Test Case Design	[date]	[date]
+Environment Setup	[date]	[date]
+Test Execution	[date]	[date]
+Defect Retesting	[date]	[date]
+Final Reporting	[date]	[date]
+
+11. Resources
+Role	Name	Responsibility
+Test Lead	[Ajeet Maurya]	Plan, supervise, report
+QA Engineers	[Ajeet Maurya]	Design, execute, report
+Developers	[Names]	Fix defects, support QA
+
+12. Risks and Mitigations
+Risk	Impact	Mitigation Strategy
+Requirements changes late	High	Freeze scope, change control
+Lack of test data	Medium	Prepare realistic datasets early
+Environment downtime	High	Backup systems, local mocks
+
+13. Approvals
+Name	Role	Signature	Date
+[Test Lead]	QA Lead		
+[Project Mgr]	Project Manager		
+[Client/Stakeholder]	UAT Signatory		
+
